@@ -38,6 +38,6 @@ O trabalho deve ser entregue até as **23:59 do dia 06/10 (sábado)**. A entrega
 ## Grupo
 O trabalho pode ser feito em grupos de até 3 pessoas. Preencha abaixo o nome dos integrantes do grupo:
 
-1) Integrante A - matrícula
-2) Integrante B - matrícula
-3) Integrante C - matrícula
+1) Gabriel Louzada Rabelo - 1711782
+2) João Victo Lima Bronze - 1711732
+3) Raphael Louzada Rabelo - 1711747
