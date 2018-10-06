@@ -12,37 +12,50 @@ struct fila {
 };
 
 Fila* fila_criar() {
-	lista *1 = (lista*) malloc(sizeof(lista));
-	1->primeiro = NULL;
-	return 1;
+	Fila *f = (Fila*) malloc(sizeof(Fila));
+	f->primeiro = NULL;
+	f->ultimo = NULL;
+	return f;
 }
 
 void fila_adicionar(Fila *f, Token t) {
 	No *n = (No*) malloc(sizeof(No));
-	n ->token = n;
-	n ->token = NULL;
+	n ->token = t;
+	n->prox = f->ultimo;
 	
-	if(n->prox != NULL) {
-		n->prox->token = n;
+	if(f->primeiro == NULL) {
+		f->primeiro = n;
 	}
-	1->n = n;
+	
+	f->ultimo = n;
 }
 
 Token fila_remover(Fila *f) {
-	if(1->primeiro == NULL){
+	if(f->primeiro == NULL){
 		printf("lista vazia\n");
-		return 0;
+		return;
 	}
 }
 
 int fila_vazia(Fila *f) {
-	//Implemente
+	if(f->primeiro == NULL) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
 }
 
 void fila_destruir(Fila *f) {
-	//Implemente
+	free(f);
 }
 
 void fila_imprimir(Fila *f) {
-	//Implemente
+	No *n;
+	n = f->primeiro;
+	
+	while(n != NULL) {
+		token_imprimir(n->token);
+		n = n->prox;
+	}
 }
